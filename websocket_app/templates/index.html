@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p class='lead'>asyncio es una biblioteca para escribir código concurrente usando sintaxis de async/await</p>
+
+<code class="language-python hljs">
+    <span class="hljs-keyword">import</span> asyncio <br><br>
+
+    <span class="hljs-keyword">async</span>
+    <span class="hljs-function">
+        <span class="hljs-keyword">def</span>
+        <span class="hljs-title">main</span><span class="hljs-params">()</span>: <br>
+    </span>
+    <div class="tab">
+        print(<span class="hljs-string">'Hello ...'</span>)<br>
+        <span class="hljs-keyword">await</span> asyncio.sleep(1)<br>
+        print(<span class="hljs-string">'... World!'</span>)<br><br>
+    </div>
+
+# Python 3.7+<br>
+asyncio.run(main())
+</code>
+
+<br>
+<p class="lead">Asyncio es usado para múltiples frameworks asíncronos de Python que de redes y servicios web, conexión a bases de datos, encolar tareas de forma distribuida, entre otros </p>
+
+<p class="lead">API's de alto nivel:</p>
+<ul class="lead">
+    <li>Corutinas</li>
+    <li>Network IO and IPC;</li>
+    <li>Controlar subprocesos</li>
+    <li>Distribuir tareas via a colas</li>
+    <li>Sincronizar código concurrente</li>
+</ul>
+
+<h3><a href="https://docs.python.org/3/library/asyncio-task.html">Corutinas</a></h3>
+
+<p class="lead">Son funciones que crean tareas (funciones asíncronas) que corren de manera paralela</p>
+
+{% endblock %}
